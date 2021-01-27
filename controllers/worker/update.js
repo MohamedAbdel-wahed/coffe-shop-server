@@ -33,7 +33,6 @@ module.exports = async ({ uuid, name, phone, job }, user) => {
     return updatedWorker
   } 
   catch (err) {
-    console.log(err)
     throw new UserInputError("Bad Input", { errors })
   }
 }

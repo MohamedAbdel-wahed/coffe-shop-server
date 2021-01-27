@@ -20,7 +20,6 @@ module.exports = async ({ table }, user) => {
     return cartItems
   } 
   catch (err) {
-    console.log(err)
     throw new UserInputError("Error", { errors: err })
   }
 }

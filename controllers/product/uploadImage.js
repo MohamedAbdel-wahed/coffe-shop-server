@@ -35,7 +35,6 @@ module.exports = async ({product,image},user) => {
     
     if(uploadedImage){
       const {public_id,format}= uploadedImage
-      console.log(public_id)
 
       //save to DB images table
       await Image.create({
@@ -48,7 +47,6 @@ module.exports = async ({product,image},user) => {
     return;
   } 
   catch (err) {
-    console.log(err)
     throw new UserInputError("Bad Input", { errors })
   }
 }

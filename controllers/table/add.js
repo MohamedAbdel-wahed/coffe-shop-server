@@ -26,7 +26,6 @@ module.exports = async ({ code, place }, user) => {
 
     return table
   } catch (err) {
-    console.log(err)
     throw new UserInputError("Input Error: ", { errors })
   }
 }

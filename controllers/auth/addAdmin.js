@@ -41,7 +41,6 @@ module.exports = async ({ username, pwd }, user) => {
 
     return newAdmin
   } catch (err) {
-    console.log(err)
     throw new UserInputError("Input Error", { errors })
   }
 }

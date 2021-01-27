@@ -14,7 +14,6 @@ module.exports = async ({uuid},user) => {
     return selectedProduct
   } 
   catch (err) {
-    console.log(err)
     throw new UserInputError("Input Error", {errors: err})
   }
 }
