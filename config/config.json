@@ -20,11 +20,15 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "bdf65af65ef7b3",
+    "password": "9fb68528",
+    "database": "cafe",
+    "host": "us-cdbr-east-03.cleardb.com",
+    "charset": "utf8mb4",
+    "timezone": "Africa/Cairo",
     "dialect": "mysql",
-    "timezone": "Africa/Cairo"
+    "dialectOptions": {
+			"timezone": "local"
+		}
   }
 }
