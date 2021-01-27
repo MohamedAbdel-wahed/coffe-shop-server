@@ -3,8 +3,8 @@ const { CREDENTIALS, CLOUDINARY } = require("../../config/env")
 const { Image,Product } = require("../../models")
 const cloudinary = require("cloudinary")
 
-module.exports = async ({product,image},user) => {
 
+module.exports = async ({product,image},user) => {
   //initialize cloudinary
   cloudinary.config({
     cloud_name: CLOUDINARY.CLOUD_NAME,
@@ -29,9 +29,7 @@ module.exports = async ({product,image},user) => {
     if (Object.keys(errors).length > 0) throw errors
 
     //save to cloudinary
-    const uploadedImage= await cloudinary.v2.uploader.upload(image,{
-      upload_preset: "cafe_products"
-    })
+    const uploadedImage= await cloudinary.v2.uploader.upload(image)
     
     if(uploadedImage){
       const {public_id,format}= uploadedImage
